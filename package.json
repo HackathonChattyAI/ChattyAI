@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "format": " prettier . --write"
+    "lint": "eslint src/**/*.{js,ts,tsx}",
+    "format": "prettier src/**/*.{js,ts,tsx} --write"
   },
   "eslintConfig": {
     "extends": [
