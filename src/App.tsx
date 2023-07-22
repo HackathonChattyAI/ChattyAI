@@ -18,15 +18,4 @@ function App() {
   )
 }
 
-function Test() {
-  return (
-    <div>
-      <h1>asdasdasd</h1>
-      <button className="prettier-class" id="prettier-id">
-        Click Here
-      </button>
-    </div>
-  )
-}
-
 export default App
