@@ -1,45 +1,41 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react"
 
 let recognition: any = null
 if ("webkitSpeechRecognition" in window) {
-    recognition = new webkitSpeechRecognition();
-    recognition.cotinuous = true;
-    recognition.lang = "ru" || "en-US";
+  recognition = new webkitSpeechRecognition()
+  recognition.cotinuous = true
+  recognition.lang = "ru" || "en-US"
 }
-
 
 const useSpeechRecognition = () => {
+  const [text, setText] = useState("")
+  const [isListening, setIsListening] = useState(false)
 
-    const [text, setText] = useState('');
-    const [isListening, setIsListening] = useState(false);
+  useEffect(() => {
+    if (!recognition) return
 
-    useEffect(() => {
-        if (!recognition) return;
+    recognition.onresult = (event: SpeechRecognitionEvent) => setText(event.results[0][0].transcript)
+    recognition.stop()
+    setIsListening(false)
+  }, [])
 
-        recognition.onresult = (event: SpeechRecognitionEvent) =>
-            setText(event.results[0][0].transcript);
-        recognition.stop();
-        setIsListening(false);
-    }, [])
+  const startListening = () => {
+    setText("")
+    setIsListening(true)
+    recognition.start()
+  }
 
-    const startListening = () => {
-        setText('');
-        setIsListening(true);
-        recognition.start();
-    }
-
-    const stopListening = () => {
-        setIsListening(false);
-        recognition.stop();
-    }
-    return {
-        text,
-        isListening,
-        startListening,
-        stopListening,
-        hasRecognitionSupport: !!recognition,
-    }
-
+  const stopListening = () => {
+    setIsListening(false)
+    recognition.stop()
+  }
+  return {
+    text,
+    isListening,
+    startListening,
+    stopListening,
+    hasRecognitionSupport: !!recognition,
+  }
 }
 
-export default useSpeechRecognition;
+export default useSpeechRecognition

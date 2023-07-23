@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import useSpeechRecognition from '../../hooks/useSpeechRecognitionHook';
 
 
-const Main = () => {
+const Main: FC = () => {
     const { text, startListening, stopListening, isListening, hasRecognitionSupport } = useSpeechRecognition()
 
     return (
