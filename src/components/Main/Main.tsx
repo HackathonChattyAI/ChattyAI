@@ -1,3 +1,4 @@
+import React, { FC } from 'react';
 import useSpeechRecognition from '../../hooks/useSpeechRecognitionHook';
 
 

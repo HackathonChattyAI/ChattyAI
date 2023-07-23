@@ -5,7 +5,6 @@ if ("webkitSpeechRecognition" in window) {
     recognition = new webkitSpeechRecognition();
     recognition.cotinuous = true;
     recognition.lang = "ru" || "en-US";
-    // recognition.lang = "ru";
 }
 
 
@@ -18,11 +17,7 @@ const useSpeechRecognition = () => {
         if (!recognition) return;
 
         recognition.onresult = (event: SpeechRecognitionEvent) =>
-            // console.log('событие onresult:::', event);
-            //    для вывода текста
-            // if(event) {
             setText(event.results[0][0].transcript);
-        // }
         recognition.stop();
         setIsListening(false);
     }, [])
