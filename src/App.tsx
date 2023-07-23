@@ -1,4 +1,5 @@
 import Main from './components/Main/Main'
+import ChatGptApi from "./api/ChatGptApi"
 
 function App() {
   const body = {
