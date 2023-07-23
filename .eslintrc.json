@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "extends": [
+      "react-app",
+      "plugin:@typescript-eslint/recommended",
+      "react-app/jest",
+      "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "project": ["./tsconfig.json"] },
+  "plugins": [
+      "@typescript-eslint"
+  ],
+  "rules": {
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowObject": true
+      }
+    ]
+  },
+  "ignorePatterns": ["src/**/*.test.ts"]
+}
