@@ -15,7 +15,7 @@ type Request<T> = (url: string, options?: Options<T>) => Promise<Response>
 
 const configOptions = {
   method: METHODS.GET,
-  headers: baseApiConfig.headers
+  headers: baseApiConfig.headers,
 }
 
 export class FetchApi {
