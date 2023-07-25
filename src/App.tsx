@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import Main from "./components/Main/Main"
 import ChatGptApi from "./api/ChatGptApi"
-import { useAppDispatch } from "./hooks/store"
+import { useAppDispatch, useAppSelector } from "./hooks/store"
 import { addMessage } from "./store/chatgpt/ChatgptActions"
+import { ChatgptSelectors } from "./store/chatgpt/ChatgptSelectors"
 
 function App() {
   const dispatch = useAppDispatch()
+  const answers = useAppSelector(ChatgptSelectors.getMesages)
   const [input, setInput] = useState("")
 
   const text = input
@@ -27,6 +29,7 @@ function App() {
       <Main />
       <input type="text" value={input} onChange={handleChange} />
       <button onClick={sendMessage}>Click</button>
+      {answers.length !== 0 ? answers.map(answer => <div>${answer}</div>) : <div>Nothing</div>}
     </>
   )
 }
