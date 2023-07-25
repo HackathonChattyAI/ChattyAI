@@ -1,28 +1,14 @@
-import React, { useState } from "react"
+import { Route, Routes } from "react-router-dom"
 import Main from "./components/Main/Main"
-import ChatGptApi from "./api/ChatGptApi"
+import Authorization from "./components/Authorization/Authorization"
 
 function App() {
-  const [input, setInput] = useState("")
-
-  const text = input
-
-  const sendMessage = async () => {
-    const response = await ChatGptApi.sendMessage(text)
-    const result = await response.json()
-    setInput("")
-    console.log(result)
-  }
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInput(event.target.value)
-  }
-
   return (
     <>
-      <Main />
-      <input type="text" value={input} onChange={handleChange} />
-      <button onClick={sendMessage}>Click</button>
+      <Routes>
+        <Route path="/signin" element={<Authorization />} />
+        <Route path="/ChattyAI" element={<Main />} />
+      </Routes>
     </>
   )
 }
