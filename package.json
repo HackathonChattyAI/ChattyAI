@@ -1,21 +1,27 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8.5"
+  },
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "13.5.0",
     "@types/dom-speech-recognition": "^0.0.1",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.38",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@types/jest": "27.5.2",
+    "@types/node": "16.18.38",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "dotenv": "16.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "typescript": "4.9.5",
+    "web-vitals": "2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,14 +29,8 @@
     "test": "react-scripts test",
     "lint": "eslint src/**/*.{js,ts,tsx}",
     "format": "prettier src/**/*.{ts,tsx} --write",
-    "prepare": "husky install"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "prettier"
-    ]
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "browserslist": {
     "production": [
@@ -45,9 +45,11 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.35.1",
+    "@typescript-eslint/parser": "5.62.0",
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
-    "lint-staged": "^13.2.3",
+    "lint-staged": "13.2.3",
     "prettier": "3.0.0"
   },
   "lint-staged": {
