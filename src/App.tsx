@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from "./hooks/store"
 import { addMessage } from "./store/chatgpt/ChatgptActions"
 import { ChatgptSelectors } from "./store/chatgpt/ChatgptSelectors"
 import Authorization from "./components/Authorization/Authorization"
+import LayoutWithHeader from "../src/layouts/LayoutWithHeader/LayoutWithHeader"
 
 function App() {
   const dispatch = useAppDispatch()
@@ -27,7 +28,7 @@ function App() {
   }
 
   return (
-    <>
+    <LayoutWithHeader title="Chatty AI">
       <Routes>
         <Route path="/ChattyAI" element={<Main />} />
         <Route path="/signin" element={<Authorization />} />
@@ -36,7 +37,7 @@ function App() {
       <input type="text" value={input} onChange={handleChange} />
       <button onClick={sendMessage}>Click</button>
       {answers.length !== 0 ? answers.map(answer => <div>${answer}</div>) : <div>Nothing</div>}
-    </>
+    </LayoutWithHeader>
   )
 }
 
