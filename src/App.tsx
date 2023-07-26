@@ -1,9 +1,11 @@
 import React, { useState } from "react"
+import { Route, Routes } from "react-router-dom"
 import Main from "./components/Main/Main"
 import ChatGptApi from "./api/ChatGptApi"
 import { useAppDispatch, useAppSelector } from "./hooks/store"
 import { addMessage } from "./store/chatgpt/ChatgptActions"
 import { ChatgptSelectors } from "./store/chatgpt/ChatgptSelectors"
+import Authorization from "./components/Authorization/Authorization"
 
 function App() {
   const dispatch = useAppDispatch()
@@ -26,7 +28,11 @@ function App() {
 
   return (
     <>
-      <Main />
+      <Routes>
+        <Route path="/ChattyAI" element={<Main />} />
+        <Route path="/signin" element={<Authorization />} />
+      </Routes>
+
       <input type="text" value={input} onChange={handleChange} />
       <button onClick={sendMessage}>Click</button>
       {answers.length !== 0 ? answers.map(answer => <div>${answer}</div>) : <div>Nothing</div>}

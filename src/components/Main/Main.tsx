@@ -1,5 +1,6 @@
 import React, { FC } from "react"
 import useSpeechRecognition from "../../hooks/useSpeechRecognitionHook"
+import { Link } from "react-router-dom"
 
 const Main: FC = () => {
   const { text, startListening, stopListening, isListening, hasRecognitionSupport } = useSpeechRecognition()
@@ -21,6 +22,8 @@ const Main: FC = () => {
       ) : (
         <h1> ваш браузер ничего не пишет</h1>
       )}
+
+      <Link to="/signin">на страницу авторизации</Link>
     </div>
   )
 }
