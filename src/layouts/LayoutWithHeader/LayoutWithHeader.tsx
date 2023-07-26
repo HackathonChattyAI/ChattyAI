@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react"
 import style from "./layoutWithHeader.module.scss"
+import InteractionPanel from "../../components/InteractionPanel/InteractionPanel"
 
 type Props = {
   title: string

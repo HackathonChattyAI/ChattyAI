@@ -10,7 +10,7 @@ const InteractionPanel: FC = () => {
       {hasRecognitionSupport ? (
         <>
           {/* временная запись текста с записи над кнопками */}
-          {text}
+          <p className={styles.text}>{text}</p>
           <div className={styles.btns}>
             <button className={styles.btn_theme}></button>
             {isListening ? (
