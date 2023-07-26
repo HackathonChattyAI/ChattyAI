@@ -1,6 +1,5 @@
 @import-normalize;
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,14 +15,21 @@
   --text-for-light: #230720;
   --text-for-dark: #F8F8F8;
 
-  --gr-purple-violet:#7E32DA;
-  --gr-purple-pink:#E52EA1;
+  --gr-purple-violet: #7E32DA;
+  --gr-purple-pink: #E52EA1;
 
-  --gr-green-green:#92DC3233;
-  --gr-green_light-violet:#7E32DA33;
+  --gr-green-green: #92DC3233;
+  --gr-green_light-violet: #7E32DA33;
   --gr-light-pink: #E52EA133;
-  
+
+
   --purple: #7C32DC;
+  --pink: #E52EA1;
+  --red: #F53333;
+  --gray: #2F2D2B;
+
+
+
 
 }
 
