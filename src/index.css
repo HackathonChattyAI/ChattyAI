@@ -33,6 +33,28 @@
 
 }
 
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans"),
+      url("./assets/fonts/AnyConv.com__FiraSans-Regular.woff2") format('woff2'),
+      url("./assets//fonts//AnyConv.com__FiraSans-Regular.woff") format('woff'),
+      url("./assets//fonts//FiraSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Fira Sans"), 
+      url("./assets/fonts/AnyConv.com__FiraSans-Medium.woff2") format('woff2'),
+      url("./assets/fonts/AnyConv.com__FiraSans-Medium.woff") format('woff'),
+      url("./assets/fonts/FiraSans-Medium.ttf") format('truetype');
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
