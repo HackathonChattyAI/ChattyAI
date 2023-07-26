@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Route, Routes } from "react-router-dom"
-import Main from "./components/Main/Main"
 import ChatGptApi from "./api/ChatGptApi"
 import { useAppDispatch, useAppSelector } from "./hooks/store"
 import { addMessage } from "./store/chatgpt/ChatgptActions"
 import { ChatgptSelectors } from "./store/chatgpt/ChatgptSelectors"
 import Authorization from "./components/Authorization/Authorization"
+import Main from "./components/Main/Main"
 
 function App() {
   const dispatch = useAppDispatch()
