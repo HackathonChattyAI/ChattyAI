@@ -1,9 +1,8 @@
 import React, { FC, ReactNode } from "react"
-import "./layoutWithHeader.scss"
-import "../../assets/styles/text.scss"
+import style from "./layoutWithHeader.module.scss"
 
 type Props = {
-  title?: string
+  title: string
   children: ReactNode | undefined
 }
 
@@ -11,10 +10,10 @@ const LayoutWithHeader: FC<Props> = props => {
   const { title, children } = props
 
   return (
-    <main className="main">
-      <header className="header">
-        <button />
-        <h1 className="H1">{title ?? ""}</h1>
+    <main className={style.main}>
+      <header className={style.header}>
+        <h1 className={style.title}>{title}</h1>
+        <button className={style.button} />
       </header>
       {children}
     </main>
