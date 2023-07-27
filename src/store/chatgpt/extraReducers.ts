@@ -7,6 +7,7 @@ export const buildAddMessage = (builder: ActionReducerMapBuilder<MessagesSlice>)
   builder
     .addCase(addMessage.pending, state => {
       state.messagesStatus = "pending"
+      state.messagesError = null
     })
     .addCase(addMessage.fulfilled, (state, action) => {
       state.messagesStatus = "success"
