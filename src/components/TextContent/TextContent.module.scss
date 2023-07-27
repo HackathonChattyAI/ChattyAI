@@ -1,10 +1,11 @@
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-start;
-  gap: 50px;
+  // gap: 50px;
+  // max-height: 400px;
+  overflow-y: auto;
 }
 
 .textsend {
@@ -15,4 +16,19 @@
 .textget {
   color: white;
   align-self: flex-start;
+}
+
+
+.container::-webkit-scrollbar {
+  width: 12px;
+  height: 323px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: var(--main-color-dark);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray);
+  border-radius: 10px;
 }

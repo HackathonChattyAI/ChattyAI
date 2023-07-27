@@ -2,6 +2,7 @@ import React, { FC } from "react"
 import style from "./TextContent.module.scss"
 import { useAppSelector } from "../../hooks/store"
 import { ChatgptSelectors } from "../../store/chatgpt/ChatgptSelectors"
+import Message from "../Message/Message"
 
 type Props = {
   text: string
@@ -14,6 +15,7 @@ const TetxContent: FC<Props> = props => {
 
   return (
     <div className={style.container}>
+      <Message />
       <p className={style.textsend}>{text}</p>
       <p className={style.textget}>{lastMessage}</p>
     </div>

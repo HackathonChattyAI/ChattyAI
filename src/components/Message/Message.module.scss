@@ -1,0 +1,66 @@
+p {
+    max-width: 255px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: var(--text-for-light);
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 25px;
+    }
+}
+
+.question {
+    color: white;
+    background: linear-gradient(90deg, rgba(230, 214, 248, 1) 35%, rgba(249, 214, 237, 1) 75%);
+    align-self: flex-end;
+    color: var(--text-for-light);
+    right: 20px;
+    margin-bottom: 40px;
+
+
+    &:before {
+        right: -7px;
+        width: 20px;
+        background: rgba(249, 214, 237, 1);
+        border-bottom-left-radius: 16px 14px;
+
+    }
+
+    &:after {
+        right: -10px;
+        width: 10px;
+        background-color: var(--main-color-dark);
+        border-bottom-left-radius: 10px;
+
+    }
+}
+
+.answer {
+    background: linear-gradient(90deg, rgba(230, 215, 248, 1) 35%, rgba(233, 248, 215, 1) 75%);
+    color: white;
+    align-self: flex-start;
+    color: var(--text-for-light);
+    left: 20px;
+
+    &:before {
+        left: -7px;
+        width: 20px;
+        background: rgba(230, 215, 248, 1);
+        border-bottom-right-radius: 16px 14px;
+    }
+
+    &:after {
+        left: -10px;
+        width: 10px;
+        background-color: var(--main-color-dark);
+        border-bottom-right-radius: 10px;
+    }
+}
