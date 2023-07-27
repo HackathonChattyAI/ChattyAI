@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react"
+import React, { FC, useCallback } from "react"
 import styles from "./InteractionPanel.module.scss"
 
 type Props = {
@@ -16,9 +16,10 @@ const InteractionPanel: FC<Props> = props => {
   const { sendMessage, useSpeech } = props
   const { text, isListening, startListening, stopListening, hasRecognitionSupport } = useSpeech
 
-  // useEffect(() => {
-  //   sendMessage(text)
-  // }, [text])
+  const handleClick = useCallback(() => {
+    stopListening()
+    sendMessage(text)
+  }, [text])
 
   return (
     <div className={styles.container}>
@@ -27,7 +28,7 @@ const InteractionPanel: FC<Props> = props => {
           <div className={styles.btns}>
             <button className={styles.btn_theme}></button>
             {isListening ? (
-              <button className={styles.btn_stop} onClick={stopListening}></button>
+              <button className={styles.btn_stop} onClick={handleClick}></button>
             ) : (
               <button className={styles.btn_talk} onClick={startListening}></button>
             )}

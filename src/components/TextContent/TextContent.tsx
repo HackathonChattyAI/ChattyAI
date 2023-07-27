@@ -10,10 +10,12 @@ type Props = {
 const TetxContent: FC<Props> = props => {
   const { text } = props
   const messages = useAppSelector(ChatgptSelectors.getMesages)
+  const lastMessage = messages.slice(-1)
 
   return (
     <div className={style.container}>
       <p className={style.textsend}>{text}</p>
+      <p className={style.textget}>{lastMessage}</p>
     </div>
   )
 }
