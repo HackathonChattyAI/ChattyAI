@@ -1,16 +1,29 @@
-import React, { FC } from "react"
-import useSpeechRecognition from "../../hooks/useSpeechRecognitionHook"
+import React, { FC, useEffect } from "react"
 import styles from "./InteractionPanel.module.scss"
 
-const InteractionPanel: FC = () => {
-  const { text, startListening, stopListening, isListening, hasRecognitionSupport } = useSpeechRecognition()
+type Props = {
+  sendMessage: (data: string) => void
+  useSpeech: {
+    text: string
+    isListening: boolean
+    startListening: () => void
+    stopListening: () => void
+    hasRecognitionSupport: boolean
+  }
+}
+
+const InteractionPanel: FC<Props> = props => {
+  const { sendMessage, useSpeech } = props
+  const { text, isListening, startListening, stopListening, hasRecognitionSupport } = useSpeech
+
+  // useEffect(() => {
+  //   sendMessage(text)
+  // }, [text])
 
   return (
     <div className={styles.container}>
       {hasRecognitionSupport ? (
         <>
-          {/* временная запись текста с записи над кнопками */}
-          {text}
           <div className={styles.btns}>
             <button className={styles.btn_theme}></button>
             {isListening ? (
