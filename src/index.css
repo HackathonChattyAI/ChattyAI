@@ -7,7 +7,7 @@
 
 :root {
   --main-color-light: #EEE9F466;
-  --main-color-dark: #FFFFFF1A;
+  --main-color-dark: #23211F;
 
   --backgroud-light: #F8F8F8;
   --backgroud-dark: #0A0806;
@@ -21,13 +21,18 @@
   --gr-green-green: #92DC3233;
   --gr-green_light-violet: #7E32DA33;
   --gr-light-pink: #E52EA133;
-
+  
 
   --purple: #7C32DC;
   --pink: #E52EA1;
   --red: #F53333;
   --gray: #2F2D2B;
+  --light-gray: #7B7A79;
 }
+
+
+
+
 
 @font-face {
   font-family: "Fira Sans";

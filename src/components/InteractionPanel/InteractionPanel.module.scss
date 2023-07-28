@@ -1,7 +1,7 @@
 .container {
     display: flex;
     width: 100%;
-    padding: 40px 0 60px 0;
+    padding: 40px 0 0 0;
     flex-direction: column;
     align-items: center;
 }
@@ -59,7 +59,7 @@
 }
 
 
-@media (max-width: 475px) {
+@media (max-width: 499px) {
     .container {
         padding: 30px 0 60px 0;
     }
