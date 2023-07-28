@@ -1,15 +1,8 @@
 import React from "react"
-import { Route, Routes } from "react-router-dom"
-import Main from "./pages/MainPage"
-import Authorization from "./components/Authorization/Authorization"
+import { Router } from "./router"
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/ChattyAI" element={<Main />} />
-      <Route path="/signin" element={<Authorization />} />
-    </Routes>
-  )
+  return <Router />
 }
 
 export default App
