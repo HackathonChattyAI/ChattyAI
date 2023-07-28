@@ -55,3 +55,72 @@
     height: 580px;
   }
 }
+
+
+
+// стилизация сообщений
+p {
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: var(--text-for-light);
+  max-width: calc(100% - 260px);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 25px;
+  }
+}
+
+.question {
+  background: linear-gradient(90deg, var(--light-purple) 35%, var(--light-pink) 75%);
+  align-self: flex-end;
+  color: var(--text-for-light);
+  right: 20px;
+  margin-bottom: 40px;
+
+
+  &:before {
+    right: -7px;
+    width: 20px;
+    background: var(--light-pink);
+    border-bottom-left-radius: 16px 14px;
+
+  }
+
+  &:after {
+    right: -10px;
+    width: 10px;
+    background-color: var(--main-color-dark);
+    border-bottom-left-radius: 10px;
+
+  }
+}
+
+.answer {
+  background: linear-gradient(90deg, var(--light-purple) 35%, var(--light-green) 75%);
+  color: var(--text-for-light);
+  align-self: flex-start;
+  left: 20px;
+
+  &:before {
+    left: -7px;
+    width: 20px;
+    background: var(--light-purple);
+    border-bottom-right-radius: 16px 14px;
+  }
+
+  &:after {
+    left: -10px;
+    width: 10px;
+    background-color: var(--main-color-dark);
+    border-bottom-right-radius: 10px;
+  }
+}

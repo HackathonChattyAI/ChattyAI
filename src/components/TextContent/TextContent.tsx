@@ -15,9 +15,9 @@ const TetxContent: FC<Props> = props => {
 
   return (
     <div className={style.container}>
-      <Message />
-      <p className={style.textsend}>{text}</p>
-      <p className={style.textget}>{lastMessage}</p>
+      {/* <Message /> */}
+      <p className={style.question}>{text}</p>
+      <p className={style.answer}>{lastMessage}</p>
     </div>
   )
 }
