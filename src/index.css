@@ -1,5 +1,57 @@
-body {
+@import-normalize;
+
+* {
+  box-sizing: border-box;
   margin: 0;
+}
+
+:root {
+  --main-color-light: #EEE9F466;
+  --main-color-dark: #FFFFFF1A;
+
+  --backgroud-light: #F8F8F8;
+  --backgroud-dark: #0A0806;
+
+  --text-for-light: #230720;
+  --text-for-dark: #F8F8F8;
+
+  --gr-purple-violet: #7E32DA;
+  --gr-purple-pink: #E52EA1;
+
+  --gr-green-green: #92DC3233;
+  --gr-green_light-violet: #7E32DA33;
+  --gr-light-pink: #E52EA133;
+
+
+  --purple: #7C32DC;
+  --pink: #E52EA1;
+  --red: #F53333;
+  --gray: #2F2D2B;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans"),
+      url("./assets/fonts/AnyConv.com__FiraSans-Regular.woff2") format('woff2'),
+      url("./assets//fonts//AnyConv.com__FiraSans-Regular.woff") format('woff'),
+      url("./assets//fonts//FiraSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Fira Sans"), 
+      url("./assets/fonts/AnyConv.com__FiraSans-Medium.woff2") format('woff2'),
+      url("./assets/fonts/AnyConv.com__FiraSans-Medium.woff") format('woff'),
+      url("./assets/fonts/FiraSans-Medium.ttf") format('truetype');
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
