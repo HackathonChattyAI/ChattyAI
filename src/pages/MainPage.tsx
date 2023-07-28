@@ -7,22 +7,22 @@ import { useAppDispatch } from "../hooks/store"
 import { addMessage } from "../store/chatgpt/ChatgptActions"
 import useSpeechRecognition from "../hooks/useSpeechRecognitionHook"
 
-const Main: FC = () => {
+const MainPage: FC = () => {
   const dispatch = useAppDispatch()
   const useSpeech = useSpeechRecognition()
 
-  const handleSendMessage = (text: string) => {
-    dispatch(addMessage(text))
+  const handleSendMessage = (question: string) => {
+    dispatch(addMessage(question))
   }
 
   return (
-    <LayoutWithHeader title="Chatty AI">
+    <LayoutWithHeader title="Chatty AI" avatar={true}>
       <SecondLayout>
-        <TextContent text={useSpeech.text} />
+        <TextContent question={useSpeech.text} />
         <InteractionPanel sendMessage={handleSendMessage} useSpeech={useSpeech} />
       </SecondLayout>
     </LayoutWithHeader>
   )
 }
 
-export default Main
+export default MainPage

@@ -5,19 +5,17 @@ import { ChatgptSelectors } from "../../store/chatgpt/ChatgptSelectors"
 import Message from "../Message/Message"
 
 type Props = {
-  text: string
+  question: string
 }
 
 const TetxContent: FC<Props> = props => {
-  const { text } = props
+  const { question } = props
   const messages = useAppSelector(ChatgptSelectors.getMesages)
-  const lastMessage = messages.slice(-1)
+  const answer = messages[messages.length - 1]
 
   return (
     <div className={style.container}>
-      {/* <Message /> */}
-      <p className={style.question}>{text}</p>
-      <p className={style.answer}>{lastMessage}</p>
+      <Message question={question} answer={answer} />
     </div>
   )
 }

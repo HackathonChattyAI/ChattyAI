@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 227px;
+  width: 100%;
+  height: 70px;
+  border-radius: 50px;
+  background: var(--gradient-purple, linear-gradient(90deg, #7E32DA 0%, #E52EA1 100%));
+}
+
+.link {
+  color: var(--text-for-dark);
+  text-decoration: none;
+  font-family: Fira Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  text-align: center;
+}

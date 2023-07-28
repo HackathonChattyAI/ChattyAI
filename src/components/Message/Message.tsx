@@ -1,22 +1,18 @@
 import React, { FC } from "react"
 import styles from "./Message.module.scss"
 
-const Message: FC = () => {
+type Props = {
+  question: string
+  answer: string
+}
+
+const Message: FC<Props> = props => {
+  const { question, answer } = props
+
   return (
     <>
-      <p className={styles.question}>Hey there! What's up</p>
-      <p className={styles.answer}>Checking out iOS7 you know..</p>
-      <p className={styles.question}>Hey there! What's up</p>
-      <p className={styles.answer}>Checking out iOS7 you know..</p>
-      <p className={styles.question}>Hey there! What's up</p>
-      <p className={styles.answer}>Checking out iOS7 you know..</p>
-      <p className={styles.question}>Hey there! What's up</p>
-      <p className={styles.answer}>Checking out iOS7 you know..</p>{" "}
-      <p className={styles.answer}>Checking out iOS7 you know..</p>
-      <p className={styles.question}>Hey there! What's up</p>
-      <p className={styles.answer}>Checking out iOS7 you know..</p>
-      <p className={styles.question}>Hey there! What's up</p>
-      <p className={styles.answer}>Checking out iOS7 you know..</p>
+      <p className={styles.question}>"{question}"</p>
+      <p className={styles.answer}>{answer}</p>
     </>
   )
 }
