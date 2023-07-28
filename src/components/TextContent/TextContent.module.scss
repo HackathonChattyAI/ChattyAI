@@ -1,10 +1,12 @@
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-start;
-  gap: 50px;
+  // gap: 50px;
+  // max-height: 400px;
+  overflow-y: auto;
+  height: 710px;
 }
 
 .textsend {
@@ -15,4 +17,41 @@
 .textget {
   color: white;
   align-self: flex-start;
+}
+
+
+.container::-webkit-scrollbar {
+  width: 12px;
+  height: 323px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: var(--main-color-dark);
+  border: none;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+}
+
+
+@media (max-height: 1024px) {
+  .container {
+    height: 640px;
+  }
+}
+
+
+@media (max-height: 982px) {
+  .container {
+    height: 410px;
+  }
+}
+
+
+@media (max-height: 390px) and (max-height: 844px) {
+  .container {
+    height: 580px;
+  }
 }
