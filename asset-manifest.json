@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ChattyAI/static/css/main.90f88bd5.css",
-    "main.js": "/ChattyAI/static/js/main.29e43214.js",
+    "main.js": "/ChattyAI/static/js/main.699d009f.js",
     "static/media/FiraSans-Medium.ttf": "/ChattyAI/static/media/FiraSans-Medium.d11d9e14e00fc1a96751.ttf",
     "static/media/FiraSans-Regular.ttf": "/ChattyAI/static/media/FiraSans-Regular.f4eb295ecc2fb842d61c.ttf",
     "static/media/AnyConv.com__FiraSans-Medium.woff2": "/ChattyAI/static/media/AnyConv.com__FiraSans-Medium.8d4029030f4e95e3f554.woff2",
@@ -14,10 +14,10 @@
     "static/media/btn_stop.svg": "/ChattyAI/static/media/btn_stop.6ab29366eb6cb7d7e56c.svg",
     "index.html": "/ChattyAI/index.html",
     "main.90f88bd5.css.map": "/ChattyAI/static/css/main.90f88bd5.css.map",
-    "main.29e43214.js.map": "/ChattyAI/static/js/main.29e43214.js.map"
+    "main.699d009f.js.map": "/ChattyAI/static/js/main.699d009f.js.map"
   },
   "entrypoints": [
     "static/css/main.90f88bd5.css",
-    "static/js/main.29e43214.js"
+    "static/js/main.699d009f.js"
   ]
 }
