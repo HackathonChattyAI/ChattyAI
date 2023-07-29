@@ -1,4 +1,4 @@
-name: CI
+name: Build and Deploy
 on:
   push:
     branches:
@@ -20,7 +20,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
+          branch: gh-pages
+          folder: build
           secrets: inherit
            
