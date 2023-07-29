@@ -1,35 +1,33 @@
-# Getting Started with Create React App
+<div align='center'>
+  <img src='./src/assets/logo_color.svg'/>
+  
+  <br>
+  
+  <a href='https://hackathonchattyai.github.io/ChattyAI/'>https://hackathonchattyai.github.io/ChattyAI/</a>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Текущий репозиторий является frontend частью хакатона Chatty AI от Яндекс Практикума "[Chatty AI](https://github.com/HackathonChattyAI)"**
 
-## Available Scripts
+##### Chatty AI - это голосовой онлайн помощник в поисках инстины. Разработан выпускниками [Яндекс.Практикума](https://practicum.yandex.ru), силами:
 
-In the project directory, you can run:
+- Frontend разработчиков
+- UX/UI дизайнеров
+- Project manager
 
-### `npm run start`
+### Стэк:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- TypeScript
+- Redux Toolkit
+- react-router-dom v6
+- Scss
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Инструкции по запуску
 
-### `npm run test`
+Версия Node.js должна быть не менее v16.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Environment
-
-Шаблон переменных находится в файле .env.sample
-Создайте файл .env в корне проекта и скопируйте туда переменные. Имя переменной должно начинаться с REACT_APP.
+1. Склонировать себе данный репозиторий.
+2. Установить зависимости командой: npm run start.
+3. Создать в корне проекта файл .env
+4. Внутри файла .env прописать REACT_APP_GPT_API_KEY = " <здесь указать свой api ключ от OpenAI>"
+5. Выполнить запуск приложения командой: npm run start
