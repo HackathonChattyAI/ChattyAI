@@ -3,25 +3,18 @@
   
   <br>
   
-  <h1>Chatty AI</h1>
-  
   <a href='https://hackathonchattyai.github.io/ChattyAI/'>https://hackathonchattyai.github.io/ChattyAI/</a>
 </div>
 
 **Текущий репозиторий является frontend частью хакатона Chatty AI от Яндекс Практикума "[Chatty AI](https://github.com/HackathonChattyAI)"**
 
-### Chatty AI - это онлайн помощник в поисках инстины. Разработан выпускниками [Яндекс.Практикума](https://practicum.yandex.ru), силами:
+##### Chatty AI - это голосовой онлайн помощник в поисках инстины. Разработан выпускниками [Яндекс.Практикума](https://practicum.yandex.ru), силами:
 
 - Frontend разработчиков
 - UX/UI дизайнеров
 - Project manager
 
-## Фич-лист:
-
-Голосовой онлайн помощник, готовый отсыкать ответы на самые заковыристые вопросы.
-Смена темы приложения.
-
-## Стэк:
+### Стэк:
 
 - React
 - TypeScript
@@ -29,7 +22,7 @@
 - react-router-dom v6
 - Scss
 
-## Инструкции по запуску
+### Инструкции по запуску
 
 Версия Node.js должна быть не менее v16.
 
@@ -38,3 +31,4 @@
 3. Создать в корне проекта файл .env
 4. Внутри файла .env прописать REACT_APP_GPT_API_KEY = " <здесь указать свой api ключ от OpenAI>"
 5. Выполнить запуск приложения командой: npm run start
+
