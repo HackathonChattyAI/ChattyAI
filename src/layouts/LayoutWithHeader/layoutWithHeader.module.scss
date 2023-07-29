@@ -1,5 +1,20 @@
+:global {
+  body[data-theme='light'] {
+    --background: var(--backgroud-light);
+    --text: var(--purple);
+    --background-img: url('../../assets/logo_color.svg');
+
+  }
+
+  body[data-theme='dark'] {
+    --background: var(--backgroud-dark);
+    --text: var(--text-for-dark);
+    --background-img: url('../../assets/logo_light.svg');
+  }
+}
+
 .main {
-  background: var(--backgroud-dark);
+  background: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,17 +30,29 @@
   width: 100%;
 }
 
-.title {
-  color: var(--text-for-dark);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
+// .title {
+//   color: var(--text);
+//   font-size: 24px;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: 140%;
+// }
 
 .button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: none;
   background: url("../../assets/icons/defaultAvatar.png"), lightgray -4.786px -3.419px / 132.222% 132.222% no-repeat;
+}
+
+
+.logo {
+  background-image: var(--background-img);
+  width: 115px;
+  height: 34px;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
 }

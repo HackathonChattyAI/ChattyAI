@@ -13,7 +13,7 @@ const LayoutWithHeader: FC<Props> = props => {
   return (
     <main className={style.main}>
       <header className={style.header}>
-        <h1 className={style.title}>{title}</h1>
+        <div className={style.logo}></div>
         {avatar === true ? <button className={style.button} /> : <></>}
       </header>
       {children}

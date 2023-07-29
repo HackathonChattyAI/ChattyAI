@@ -6,7 +6,7 @@
 }
 
 :root {
-  --main-color-light: #EEE9F466;
+  --main-color-light: #F4F2F7;
   --main-color-dark: #23211F;
 
   --backgroud-light: #F8F8F8;
@@ -66,4 +66,12 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+body[data-theme='dark'] {
+  background-color: var(--main-color-dark);
+}
+
+body[data-theme='light'] {
+  background-color: var(--main-color-light);
 }

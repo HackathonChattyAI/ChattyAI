@@ -1,5 +1,6 @@
 import React, { FC, useCallback } from "react"
 import styles from "./InteractionPanel.module.scss"
+import Switcher from "../Switcher/Switcher"
 
 type Props = {
   sendMessage: (data: string) => void
@@ -26,7 +27,7 @@ const InteractionPanel: FC<Props> = props => {
       {hasRecognitionSupport ? (
         <>
           <div className={styles.btns}>
-            <button className={styles.btn_theme}></button>
+            <Switcher />
             {isListening ? (
               <button className={styles.btn_stop} onClick={handleClick}></button>
             ) : (
