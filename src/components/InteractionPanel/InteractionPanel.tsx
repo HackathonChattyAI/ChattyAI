@@ -19,7 +19,7 @@ const InteractionPanel: FC<Props> = props => {
   const handleClick = useCallback(() => {
     stopListening()
     sendMessage(text)
-  }, [text])
+  }, [text, stopListening, sendMessage])
 
   return (
     <div className={styles.container}>
