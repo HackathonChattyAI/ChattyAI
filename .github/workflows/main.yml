@@ -19,9 +19,8 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
-           repo-token: ${{ secrets.GITHUB_TOKEN }}
-           secrets: inherit
-           branch: gh-pages
-           folder: build
-           
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          secrets: inherit
            
