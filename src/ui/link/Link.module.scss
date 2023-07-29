@@ -2,11 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 227px;
+  max-width: 324px;
   width: 100%;
-  height: 70px;
+  height: 98px;
   border-radius: 50px;
-  background: var(--gradient-purple, linear-gradient(90deg, #7E32DA 0%, #E52EA1 100%));
+  background: linear-gradient(90deg, var(--gr-purple-violet) 25%, var(--gr-purple-pink) 75%);
+
+  @media screen and (max-width: 1000px) {
+    max-width: 152px;
+    width: 100%;
+    height: 60px;
+  }
 }
 
 .link {

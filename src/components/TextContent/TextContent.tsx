@@ -2,20 +2,20 @@ import React, { FC } from "react"
 import style from "./TextContent.module.scss"
 import { useAppSelector } from "../../hooks/store"
 import { ChatgptSelectors } from "../../store/chatgpt/ChatgptSelectors"
+import { SpeechSelectors } from "../../store/speech/SpeechSelectors"
 import Message from "../Message/Message"
+import { zip } from "../../utils/zip"
 
-type Props = {
-  question: string
-}
-
-const TetxContent: FC<Props> = props => {
-  const { question } = props
+const TetxContent: FC = () => {
+  const questions = useAppSelector(SpeechSelectors.getSpeech)
   const messages = useAppSelector(ChatgptSelectors.getMesages)
-  const answer = messages[messages.length - 1]
+  const result = zip(questions, messages)
 
   return (
     <div className={style.container}>
-      <Message question={question} answer={answer} />
+      {result.map((res, index) => (
+        <Message key={index} question={res[0]} answer={res[1]} />
+      ))}
     </div>
   )
 }

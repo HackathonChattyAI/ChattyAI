@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import styled from "./AuthForm.module.scss"
 import Input from "../../ui/input/index"
 import ReactLink from "../../ui/link/index"
+import { Routes } from "../../constants/routes"
 
 const AuthForm: FC = () => {
   return (
@@ -13,7 +14,7 @@ const AuthForm: FC = () => {
       </p>
       <Input placeholder="email@inbox.ru" />
       <Input />
-      <ReactLink to="/ChattyAI">Продолжить</ReactLink>
+      <ReactLink to={Routes.HOME}>Продолжить</ReactLink>
     </form>
   )
 }

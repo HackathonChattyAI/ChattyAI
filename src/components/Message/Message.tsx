@@ -11,8 +11,8 @@ const Message: FC<Props> = props => {
 
   return (
     <>
-      {question ? <p className={styles.question}>{question}</p> : null}
-      {answer ? <p className={styles.answer}>{answer}</p> : null}
+      {question ? <p className={`${styles.paragraf} ${styles.question}`}>{question}</p> : null}
+      {answer ? <p className={`${styles.paragraf} ${styles.answer}`}>{answer}</p> : null}
     </>
   )
 }

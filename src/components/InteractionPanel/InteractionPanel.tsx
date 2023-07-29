@@ -4,6 +4,7 @@ import Switcher from "../Switcher/Switcher"
 
 type Props = {
   sendMessage: (data: string) => void
+
   useSpeech: {
     text: string
     isListening: boolean
@@ -17,7 +18,7 @@ const InteractionPanel: FC<Props> = props => {
   const { sendMessage, useSpeech } = props
   const { text, isListening, startListening, stopListening, hasRecognitionSupport } = useSpeech
 
-  const handleClick = useCallback(() => {
+  const handleClickStartListening = useCallback(() => {
     stopListening()
     sendMessage(text)
   }, [text])
@@ -29,7 +30,7 @@ const InteractionPanel: FC<Props> = props => {
           <div className={styles.btns}>
             <Switcher />
             {isListening ? (
-              <button className={styles.btn_stop} onClick={handleClick}></button>
+              <button className={styles.btn_stop} onClick={handleClickStartListening}></button>
             ) : (
               <button className={styles.btn_talk} onClick={startListening}></button>
             )}
