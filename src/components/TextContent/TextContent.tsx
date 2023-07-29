@@ -5,6 +5,7 @@ import { ChatgptSelectors } from "../../store/chatgpt/ChatgptSelectors"
 import { SpeechSelectors } from "../../store/speech/SpeechSelectors"
 import Message from "../Message/Message"
 import { zip } from "../../utils/zip"
+// import Greetings from "../Greetings/Greetings"
 
 const TetxContent: FC = () => {
   const questions = useAppSelector(SpeechSelectors.getSpeech)
