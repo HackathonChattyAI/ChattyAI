@@ -1,5 +1,15 @@
+:global {
+  body[data-theme='light'] {
+    --background-color: var(--main-color-light);
+  }
+
+  body[data-theme='dark'] {
+    --background-color: var(--main-color-dark);
+  }
+}
+
 .secondlayout {
-  background: var(--main-color-dark);
+  background: var(--background-color);
   border-radius: 20px;
   display: flex;
   padding: 10px 10px 60px 10px;

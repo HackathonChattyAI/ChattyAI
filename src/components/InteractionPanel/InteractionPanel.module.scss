@@ -6,8 +6,11 @@
     align-items: center;
 }
 
-.text {
-    color: var(--text-for-dark);
+.btns {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
 }
 
 .btn_talk,
@@ -31,6 +34,10 @@
     background-image: url('../../assets/btn_talk.svg');
 }
 
+.btn_talk:hover {
+    filter: drop-shadow(0px 4px 5px #9747FF) drop-shadow(2px -2px 2px #ffe486);
+}
+
 .btn_stop {
     background-image: url('../../assets/btn_stop.svg');
     width: 120px;
@@ -38,7 +45,6 @@
     filter: drop-shadow(0px 4px 13px #9747FF) drop-shadow(2px -2px 17px rgba(255, 228, 133, 0.60));
 }
 
-.btn_theme,
 .btn_zoom {
     width: 100px;
     height: 100px;
@@ -50,10 +56,6 @@
     border: none;
     padding: 0;
     cursor: not-allowed;
-}
-
-.btn_theme {
-    background-image: url('../../assets/btn_theme_on.svg');
 }
 
 .btn_zoom {
@@ -73,7 +75,6 @@
         margin: 0 38px;
     }
 
-    .btn_theme,
     .btn_zoom {
         width: 60px;
         height: 60px;
