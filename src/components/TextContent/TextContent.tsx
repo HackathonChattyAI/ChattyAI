@@ -3,7 +3,7 @@ import style from "./TextContent.module.scss"
 import { useAppSelector } from "../../hooks/store"
 import { ChatgptSelectors } from "../../store/chatgpt/ChatgptSelectors"
 import Message from "../Message/Message"
-import Greetings from '../Greetings/Greetings'
+import Greetings from "../Greetings/Greetings"
 
 type Props = {
   question: string
@@ -16,7 +16,7 @@ const TetxContent: FC<Props> = props => {
 
   return (
     <div className={style.container}>
-      {question ? <Message question={question} answer={answer} /> : <Greetings />}
+      <Message question={question} answer={answer} />
     </div>
   )
 }
