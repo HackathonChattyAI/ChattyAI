@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/ChattyAI/static/css/main.e6c13ad2.css",
-    "main.js": "/ChattyAI/static/js/main.eddb0bce.js",
+    "main.css": "/ChattyAI/static/css/main.90f88bd5.css",
+    "main.js": "/ChattyAI/static/js/main.29e43214.js",
+    "static/media/FiraSans-Medium.ttf": "/ChattyAI/static/media/FiraSans-Medium.d11d9e14e00fc1a96751.ttf",
+    "static/media/FiraSans-Regular.ttf": "/ChattyAI/static/media/FiraSans-Regular.f4eb295ecc2fb842d61c.ttf",
+    "static/media/AnyConv.com__FiraSans-Medium.woff2": "/ChattyAI/static/media/AnyConv.com__FiraSans-Medium.8d4029030f4e95e3f554.woff2",
+    "static/media/AnyConv.com__FiraSans-Regular.woff2": "/ChattyAI/static/media/AnyConv.com__FiraSans-Regular.bc45a80219aec1bc8b8e.woff2",
+    "static/media/AnyConv.com__FiraSans-Medium.woff": "/ChattyAI/static/media/AnyConv.com__FiraSans-Medium.dcc73587860ba685fcaf.woff",
+    "static/media/AnyConv.com__FiraSans-Regular.woff": "/ChattyAI/static/media/AnyConv.com__FiraSans-Regular.d162e9150b33102ff994.woff",
+    "static/media/btn_theme_on.svg": "/ChattyAI/static/media/btn_theme_on.f286edaaa2be620a1370.svg",
+    "static/media/btn_talk.svg": "/ChattyAI/static/media/btn_talk.2a6fd1246149eb6061d7.svg",
+    "static/media/btn_zoom.svg": "/ChattyAI/static/media/btn_zoom.0533976b594a0a274bf4.svg",
+    "static/media/btn_stop.svg": "/ChattyAI/static/media/btn_stop.6ab29366eb6cb7d7e56c.svg",
     "index.html": "/ChattyAI/index.html",
-    "main.e6c13ad2.css.map": "/ChattyAI/static/css/main.e6c13ad2.css.map",
-    "main.eddb0bce.js.map": "/ChattyAI/static/js/main.eddb0bce.js.map"
+    "main.90f88bd5.css.map": "/ChattyAI/static/css/main.90f88bd5.css.map",
+    "main.29e43214.js.map": "/ChattyAI/static/js/main.29e43214.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.eddb0bce.js"
+    "static/css/main.90f88bd5.css",
+    "static/js/main.29e43214.js"
   ]
 }
