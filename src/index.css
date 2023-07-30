@@ -42,8 +42,7 @@
   font-display: swap;
   font-style: normal;
   font-weight: 400;
-  src: local("Fira Sans"),
-      url("./assets/fonts/AnyConv.com__FiraSans-Regular.woff2") format('woff2'),
+  src: 
       url("./assets//fonts//AnyConv.com__FiraSans-Regular.woff") format('woff'),
       url("./assets//fonts//FiraSans-Regular.ttf") format("truetype");
 }
@@ -53,8 +52,7 @@
   font-display: swap;
   font-style: normal;
   font-weight: 500;
-  src: local("Fira Sans"), 
-      url("./assets/fonts/AnyConv.com__FiraSans-Medium.woff2") format('woff2'),
+  src: 
       url("./assets/fonts/AnyConv.com__FiraSans-Medium.woff") format('woff'),
       url("./assets/fonts/FiraSans-Medium.ttf") format('truetype');
 }
