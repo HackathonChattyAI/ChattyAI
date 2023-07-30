@@ -1,6 +1,6 @@
 import React, { FC, ReactNode, useState, useCallback } from "react"
 import style from "./layoutWithHeader.module.scss"
-import Modal from "../../components/Modal/Modal"
+import PopupAvatar from "../../components/PopupAvatar/PopupAvatar"
 
 export enum backGroundStyle {
   auth = "auth",
@@ -44,7 +44,7 @@ const LayoutWithHeader: FC<Props> = props => {
         <div className={style.logo}></div>
         {avatar === true ? <button onClick={handleClick} className={style.button} /> : <></>}
       </header>
-      <Modal visible={modal} outSideClickEnable handleClose={handleClose} />
+      <PopupAvatar visible={modal} outSideClickEnable handleClose={handleClose} />
       {children}
     </main>
   )
