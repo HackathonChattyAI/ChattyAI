@@ -1,12 +1,22 @@
+:global {
+  body[data-theme='light'] {
+    --background-color: var(--main-color-light);
+  }
+
+  body[data-theme='dark'] {
+    --background-color: var(--main-color-dark);
+  }
+}
+
 .secondlayout {
-  background: rgba(255, 255, 255, 0.10);
+  background: var(--background-color);
   border-radius: 20px;
   display: flex;
   padding: 10px 10px 60px 10px;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
-  min-height: 100vh;
+  margin-top: 20px;
+  height: 100%;
 }
-
