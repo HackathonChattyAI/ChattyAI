@@ -1,11 +1,13 @@
 import React, { FC, ReactNode, useState, useCallback } from "react"
 import style from "./layoutWithHeader.module.scss"
+
 import PopupAvatar from "../../components/PopupAvatar/PopupAvatar"
 
 export enum backGroundStyle {
   auth = "auth",
   notFound = "error404",
 }
+
 
 type Props = {
   bg_img?: string
