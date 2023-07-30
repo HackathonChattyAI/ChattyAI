@@ -45,24 +45,6 @@
     filter: drop-shadow(0px 4px 13px #9747FF) drop-shadow(2px -2px 17px rgba(255, 228, 133, 0.60));
 }
 
-.btn_zoom {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: not-allowed;
-}
-
-.btn_zoom {
-    background-image: url('../../assets/btn_zoom.svg');
-}
-
-
 @media (max-width: 499px) {
     .container {
         padding: 30px 0 0 0;
@@ -74,10 +56,4 @@
         height: 80px;
         margin: 0 38px;
     }
-
-    .btn_zoom {
-        width: 60px;
-        height: 60px;
-    }
-
 }

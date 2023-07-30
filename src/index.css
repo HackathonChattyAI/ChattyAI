@@ -33,6 +33,7 @@
   --light-pink: #f9d6ed;
   --light-purple: #e6d6f8;
   --light-green: #e9f8d7;
+
 }
 
 
@@ -59,7 +60,7 @@
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Fira Sans', 'PT Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,4 +75,13 @@ body[data-theme='dark'] {
 
 body[data-theme='light'] {
   background-color: var(--main-color-light);
+}
+
+body[data-zoom='medium']{
+  font-size: 20px;
+}
+
+
+body[data-zoom='large']{
+  font-size: 24px;
 }
