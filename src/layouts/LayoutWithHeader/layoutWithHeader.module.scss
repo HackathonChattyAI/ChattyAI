@@ -3,13 +3,14 @@
     --background: var(--backgroud-light);
     --text: var(--purple);
     --background-img: url('../../assets/logo_color.svg');
-
+    --background-img-404: url('../../assets/bg_img404_light.png');
   }
 
   body[data-theme='dark'] {
     --background: var(--backgroud-dark);
     --text: var(--text-for-dark);
     --background-img: url('../../assets/logo_light.svg');
+    --background-img-404: url('../../assets/bg_img_dark.png');
   }
 }
 
@@ -21,22 +22,39 @@
   justify-content: flex-start;
   padding: 2.5em;
   height: 100vh;
-
 }
+
+.main_auth_img {
+  background: url("../../assets/bg_img_dark.png") center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5em;
+  height: 100vh;
+}
+
+.main_404_img {
+  background-image: url("../../assets/bg_img_dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5em;
+  height: 100vh;
+  gap: 7rem;
+}
+
 
 .header {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-
-// .title {
-//   color: var(--text);
-//   font-size: 24px;
-//   font-style: normal;
-//   font-weight: 700;
-//   line-height: 140%;
-// }
 
 .button {
   width: 40px;
@@ -45,7 +63,6 @@
   border: none;
   background: url("../../assets/icons/defaultAvatar.png"), lightgray -4.786px -3.419px / 132.222% 132.222% no-repeat;
 }
-
 
 .logo {
   background-image: var(--background-img);

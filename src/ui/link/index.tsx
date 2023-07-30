@@ -6,11 +6,9 @@ type Props = LinkProps
 
 const Link: FC<Props> = ({ children, ...props }) => {
   return (
-    <div className={styled.wrapper}>
-      <ReactLink className={styled.link} {...props}>
-        {children}
-      </ReactLink>
-    </div>
+    <ReactLink className={styled.link} {...props}>
+      {children}
+    </ReactLink>
   )
 }
 

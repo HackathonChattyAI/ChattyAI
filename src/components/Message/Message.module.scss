@@ -8,15 +8,20 @@
     }
 }
 
-p {
+.question,
+.answer {
+    font-family: Fira Sans;
     word-wrap: break-word;
     margin-bottom: 12px;
-    line-height: 24px;
     position: relative;
     padding: 10px 20px;
     border-radius: 25px;
     color: var(--text-for-light);
     max-width: calc(100% - 15%);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
 
     &:before,
     &:after {

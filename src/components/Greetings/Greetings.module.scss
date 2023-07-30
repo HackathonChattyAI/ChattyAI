@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .title {
@@ -38,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .subtitle {
@@ -59,8 +60,6 @@
 
 .text {
     width: 340px;
-    min-width: 280px;
-    max-width: 460px;
     border-radius: 20px;
     padding: 16px;
     margin-top: 20px;
@@ -69,22 +68,39 @@
 }
 
 
-@media (max-height: 1024px) {
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .subject {
         padding-top: 40px;
     }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
 }
 
+@media (max-width: 454px) {
+    .subject {
+        padding-top: 20px;
+    }
 
-// @media (max-height: 982px) {
-//     .content {
-//         margin-top: 80px;
-//     }
-// }
+    .text {
+        width: 280px;
+    }
 
+    .title {
+        font-size: 30px;
+    }
 
-// @media (max-width: 390px) and (max-height: 844px) {
-//     .content {
-//         margin-top: 20px;
-//     }
-// }
+    .subtitle {
+        font-size: 22px;
+    }
+}

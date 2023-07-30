@@ -5,6 +5,7 @@ import InteractionPanel from "../components/InteractionPanel/InteractionPanel"
 import TextContent from "../components/TextContent/TextContent"
 import { useAppDispatch } from "../hooks/store"
 import { addMessage } from "../store/chatgpt/ChatgptActions"
+import { addSpeech } from "../store/speech/SpeechSlice"
 import useSpeechRecognition from "../hooks/useSpeechRecognitionHook"
 
 const MainPage: FC = () => {
@@ -13,12 +14,13 @@ const MainPage: FC = () => {
 
   const handleSendMessage = (question: string) => {
     dispatch(addMessage(question))
+    dispatch(addSpeech(question))
   }
 
   return (
-    <LayoutWithHeader title="Chatty AI" avatar={true}>
+    <LayoutWithHeader avatar={true}>
       <SecondLayout>
-        <TextContent question={useSpeech.text} />
+        <TextContent />
         <InteractionPanel sendMessage={handleSendMessage} useSpeech={useSpeech} />
       </SecondLayout>
     </LayoutWithHeader>
