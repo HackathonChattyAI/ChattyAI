@@ -1,6 +1,7 @@
 import React, { FC, useCallback } from "react"
-import styles from "./InteractionPanel.module.scss"
+import style from "./InteractionPanel.module.scss"
 import Switcher from "../Switcher/Switcher"
+import ZoomButton from '../ZoomButton/ZoomButton'
 
 type Props = {
   sendMessage: (data: string) => void
@@ -24,17 +25,17 @@ const InteractionPanel: FC<Props> = props => {
   }, [text])
 
   return (
-    <div className={styles.container}>
+    <div className={style.container}>
       {hasRecognitionSupport ? (
         <>
-          <div className={styles.btns}>
+          <div className={style.btns}>
             <Switcher />
             {isListening ? (
-              <button className={styles.btn_stop} onClick={handleClickStartListening}></button>
+              <button className={style.btn_stop} onClick={handleClickStartListening}></button>
             ) : (
-              <button className={styles.btn_talk} onClick={startListening}></button>
+              <button className={style.btn_talk} onClick={startListening}></button>
             )}
-            <button className={styles.btn_zoom}></button>
+            <ZoomButton />
           </div>
         </>
       ) : (

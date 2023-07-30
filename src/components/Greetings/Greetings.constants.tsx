@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid"
-import { Explanations } from "../../types/Explanations"
+// import { Explanations } from "../../types/Explanations"
 
 export const GreetingsExample = [
   {
