@@ -1,8 +1,11 @@
 import React, { FC, useCallback } from "react"
-import styles from "./InteractionPanel.module.scss"
+import style from "./InteractionPanel.module.scss"
+import Switcher from "../Switcher/Switcher"
+import ZoomButton from "../ZoomButton/ZoomButton"
 
 type Props = {
   sendMessage: (data: string) => void
+
   useSpeech: {
     text: string
     isListening: boolean
@@ -16,23 +19,23 @@ const InteractionPanel: FC<Props> = props => {
   const { sendMessage, useSpeech } = props
   const { text, isListening, startListening, stopListening, hasRecognitionSupport } = useSpeech
 
-  const handleClick = useCallback(() => {
+  const handleClickStartListening = useCallback(() => {
     stopListening()
     sendMessage(text)
   }, [text, stopListening, sendMessage])
 
   return (
-    <div className={styles.container}>
+    <div className={style.container}>
       {hasRecognitionSupport ? (
         <>
-          <div className={styles.btns}>
-            <button className={styles.btn_theme}></button>
+          <div className={style.btns}>
+            <Switcher />
             {isListening ? (
-              <button className={styles.btn_stop} onClick={handleClick}></button>
+              <button className={style.btn_stop} onClick={handleClickStartListening}></button>
             ) : (
-              <button className={styles.btn_talk} onClick={startListening}></button>
+              <button className={style.btn_talk} onClick={startListening}></button>
             )}
-            <button className={styles.btn_zoom}></button>
+            <ZoomButton />
           </div>
         </>
       ) : (

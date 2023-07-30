@@ -1,20 +1,50 @@
-import React, { FC, ReactNode } from "react"
+import React, { FC, ReactNode, useState, useCallback } from "react"
 import style from "./layoutWithHeader.module.scss"
+import PopupAvatar from "../../components/PopupAvatar/PopupAvatar"
+
+export enum backGroundStyle {
+  auth = "auth",
+  notFound = "error404",
+}
 
 type Props = {
-  title: string
+  bg_img?: string
+  avatar?: boolean
   children: ReactNode | undefined
 }
 
 const LayoutWithHeader: FC<Props> = props => {
-  const { title, children } = props
+  const { children, avatar, bg_img } = props
+  const [modal, setModal] = useState(false)
+
+  const handleClose = useCallback(() => {
+    setModal(false)
+  }, [setModal])
+
+  const handleClick = () => {
+    setModal(true)
+  }
+
+  let backGround_img
+  switch (bg_img) {
+    case "auth":
+      backGround_img = `${style.main_auth_img}`
+      break
+    case "error404":
+      backGround_img = `${style.main_404_img}`
+      break
+    default:
+      backGround_img = `${style.main}`
+      break
+  }
 
   return (
-    <main className={style.main}>
+    <main className={backGround_img}>
       <header className={style.header}>
-        <h1 className={style.title}>{title}</h1>
-        <button className={style.button} />
+        <div className={style.logo}></div>
+        {avatar === true ? <button onClick={handleClick} className={style.button} /> : <></>}
       </header>
+      <PopupAvatar visible={modal} outSideClickEnable handleClose={handleClose} />
       {children}
     </main>
   )

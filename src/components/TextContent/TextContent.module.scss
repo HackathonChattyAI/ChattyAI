@@ -1,18 +1,67 @@
+:global {
+  body[data-theme='light'] {
+    --background-scroll: var(--main-color-light);
+    --thumb-scroll: var(--white)
+  }
+
+  body[data-theme='dark'] {
+    --background-scroll: var(--main-color-dark);
+    --thumb-scroll: var(--light-gray);
+  }
+}
+
 .container {
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-start;
-  gap: 50px;
+  overflow-y: auto;
+  height: 710px;
 }
 
-.textsend {
-  color: white;
-  align-self: flex-end;
+// .textsend {
+//   color: white;
+//   align-self: flex-end;
+// }
+
+// .textget {
+//   color: white;
+//   align-self: flex-start;
+// }
+
+
+.container::-webkit-scrollbar {
+  width: 12px;
+  height: 323px;
 }
 
-.textget {
-  color: white;
-  align-self: flex-start;
+.container::-webkit-scrollbar-track {
+  background: var(--background-scroll);
+  border: none;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-scroll);
+  border-radius: 10px;
+}
+
+
+@media (max-height: 1024px) {
+  .container {
+    height: 640px;
+  }
+}
+
+
+@media (max-height: 982px) {
+  .container {
+    height: 410px;
+  }
+}
+
+
+@media (max-width: 390px) and (max-height: 844px) {
+  .container {
+    height: 580px;
+  }
 }

@@ -1,0 +1,37 @@
+:global {
+  body[data-theme='light'] {
+    --colot-btn-text: var(blue);
+  }
+
+  body[data-theme='dark'] {
+    --colot-btn-text: var(red);
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 324px;
+  height: 98px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, var(--gr-purple-violet) 25%, var(--gr-purple-pink) 75%);
+  color: var(--colot-btn-text);
+  text-decoration: none;
+  font-family: Fira Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.28px;
+  text-align: center;
+
+  &:hover {
+    filter: drop-shadow(0px 4px 5px #9747FF) drop-shadow(2px -2px 2px #ffe486);
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 152px;
+    height: 60px;
+  }
+}

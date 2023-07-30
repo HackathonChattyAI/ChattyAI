@@ -5,24 +5,26 @@ import InteractionPanel from "../components/InteractionPanel/InteractionPanel"
 import TextContent from "../components/TextContent/TextContent"
 import { useAppDispatch } from "../hooks/store"
 import { addMessage } from "../store/chatgpt/ChatgptActions"
+import { addSpeech } from "../store/speech/SpeechSlice"
 import useSpeechRecognition from "../hooks/useSpeechRecognitionHook"
 
-const Main: FC = () => {
+const MainPage: FC = () => {
   const dispatch = useAppDispatch()
   const useSpeech = useSpeechRecognition()
 
-  const handleSendMessage = (text: string) => {
-    dispatch(addMessage(text))
+  const handleSendMessage = (question: string) => {
+    dispatch(addMessage(question))
+    dispatch(addSpeech(question))
   }
 
   return (
-    <LayoutWithHeader title="Chatty AI">
+    <LayoutWithHeader avatar={true}>
       <SecondLayout>
-        <TextContent text={useSpeech.text} />
+        <TextContent />
         <InteractionPanel sendMessage={handleSendMessage} useSpeech={useSpeech} />
       </SecondLayout>
     </LayoutWithHeader>
   )
 }
 
-export default Main
+export default MainPage
