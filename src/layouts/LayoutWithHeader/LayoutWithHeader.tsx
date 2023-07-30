@@ -1,5 +1,6 @@
 import React, { FC, ReactNode, useState, useCallback } from "react"
 import style from "./layoutWithHeader.module.scss"
+
 import PopupAvatar from "../../components/PopupAvatar/PopupAvatar"
 
 export enum backGroundStyle {
