@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/ChattyAI/static/css/main.90f88bd5.css",
-    "main.js": "/ChattyAI/static/js/main.699d009f.js",
+    "main.css": "/ChattyAI/static/css/main.b65067ba.css",
+    "main.js": "/ChattyAI/static/js/main.a92e8d4f.js",
+    "static/media/bg_img_dark.png": "/ChattyAI/static/media/bg_img_dark.35e6493ca01e895d4fe6.png",
+    "static/media/bg_img404_light.png": "/ChattyAI/static/media/bg_img404_light.0459532960066b8e6f5e.png",
     "static/media/FiraSans-Medium.ttf": "/ChattyAI/static/media/FiraSans-Medium.d11d9e14e00fc1a96751.ttf",
     "static/media/FiraSans-Regular.ttf": "/ChattyAI/static/media/FiraSans-Regular.f4eb295ecc2fb842d61c.ttf",
     "static/media/AnyConv.com__FiraSans-Medium.woff2": "/ChattyAI/static/media/AnyConv.com__FiraSans-Medium.8d4029030f4e95e3f554.woff2",
     "static/media/AnyConv.com__FiraSans-Regular.woff2": "/ChattyAI/static/media/AnyConv.com__FiraSans-Regular.bc45a80219aec1bc8b8e.woff2",
     "static/media/AnyConv.com__FiraSans-Medium.woff": "/ChattyAI/static/media/AnyConv.com__FiraSans-Medium.dcc73587860ba685fcaf.woff",
     "static/media/AnyConv.com__FiraSans-Regular.woff": "/ChattyAI/static/media/AnyConv.com__FiraSans-Regular.d162e9150b33102ff994.woff",
+    "static/media/logo_color.svg": "/ChattyAI/static/media/logo_color.fe35bade707e249435c5.svg",
+    "static/media/logo_light.svg": "/ChattyAI/static/media/logo_light.c8007181c0a9b3b355bf.svg",
+    "static/media/settings.svg": "/ChattyAI/static/media/settings.67b1cd2586edfd1f942d.svg",
     "static/media/btn_theme_on.svg": "/ChattyAI/static/media/btn_theme_on.f286edaaa2be620a1370.svg",
+    "static/media/btn_theme_off.svg": "/ChattyAI/static/media/btn_theme_off.8028494027a5c0fb13c8.svg",
     "static/media/btn_talk.svg": "/ChattyAI/static/media/btn_talk.2a6fd1246149eb6061d7.svg",
     "static/media/btn_zoom.svg": "/ChattyAI/static/media/btn_zoom.0533976b594a0a274bf4.svg",
+    "static/media/signOut.svg": "/ChattyAI/static/media/signOut.d522939a5660244149aa.svg",
     "static/media/btn_stop.svg": "/ChattyAI/static/media/btn_stop.6ab29366eb6cb7d7e56c.svg",
     "index.html": "/ChattyAI/index.html",
-    "main.90f88bd5.css.map": "/ChattyAI/static/css/main.90f88bd5.css.map",
-    "main.699d009f.js.map": "/ChattyAI/static/js/main.699d009f.js.map"
+    "main.b65067ba.css.map": "/ChattyAI/static/css/main.b65067ba.css.map",
+    "main.a92e8d4f.js.map": "/ChattyAI/static/js/main.a92e8d4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.90f88bd5.css",
-    "static/js/main.699d009f.js"
+    "static/css/main.b65067ba.css",
+    "static/js/main.a92e8d4f.js"
   ]
 }
