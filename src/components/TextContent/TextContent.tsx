@@ -5,7 +5,7 @@ import { ChatgptSelectors } from "../../store/chatgpt/ChatgptSelectors"
 import { SpeechSelectors } from "../../store/speech/SpeechSelectors"
 import Message from "../Message/Message"
 import { zip } from "../../utils/zip"
-// import Greetings from "../Greetings/Greetings"
+import Greetings from "../Greetings/Greetings"
 
 const TetxContent: FC = () => {
   const questions = useAppSelector(SpeechSelectors.getSpeech)
@@ -14,9 +14,11 @@ const TetxContent: FC = () => {
 
   return (
     <div className={style.container}>
-      {result.map((res, index) => (
-        <Message key={index} question={res[0]} answer={res[1]} />
-      ))}
+      {result && result.length !== 0 ? (
+        result.map((res, index) => <Message key={index} question={res[0]} answer={res[1]} />)
+      ) : (
+        <Greetings />
+      )}
     </div>
   )
 }

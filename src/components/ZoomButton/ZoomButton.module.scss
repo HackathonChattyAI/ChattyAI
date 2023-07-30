@@ -8,11 +8,12 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    cursor: not-allowed;
+    background-image: url('../../assets/btn_zoom.svg');
+
 }
 
-.btn_zoom {
-    background-image: url('../../assets/btn_zoom.svg');
+.btn_zoom:hover {
+    filter: drop-shadow(0px 4px 5px #9747FF) drop-shadow(2px -2px 2px #ffe486);
 }
 
 @media (max-width: 499px) {
