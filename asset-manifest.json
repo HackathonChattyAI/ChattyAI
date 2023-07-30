@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ChattyAI/static/css/main.b65067ba.css",
-    "main.js": "/ChattyAI/static/js/main.a92e8d4f.js",
+    "main.js": "/ChattyAI/static/js/main.874fa062.js",
     "static/media/bg_img_dark.png": "/ChattyAI/static/media/bg_img_dark.35e6493ca01e895d4fe6.png",
     "static/media/bg_img404_light.png": "/ChattyAI/static/media/bg_img404_light.0459532960066b8e6f5e.png",
     "static/media/FiraSans-Medium.ttf": "/ChattyAI/static/media/FiraSans-Medium.d11d9e14e00fc1a96751.ttf",
@@ -21,10 +21,10 @@
     "static/media/btn_stop.svg": "/ChattyAI/static/media/btn_stop.6ab29366eb6cb7d7e56c.svg",
     "index.html": "/ChattyAI/index.html",
     "main.b65067ba.css.map": "/ChattyAI/static/css/main.b65067ba.css.map",
-    "main.a92e8d4f.js.map": "/ChattyAI/static/js/main.a92e8d4f.js.map"
+    "main.874fa062.js.map": "/ChattyAI/static/js/main.874fa062.js.map"
   },
   "entrypoints": [
     "static/css/main.b65067ba.css",
-    "static/js/main.a92e8d4f.js"
+    "static/js/main.874fa062.js"
   ]
 }
