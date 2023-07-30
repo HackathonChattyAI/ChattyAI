@@ -3,7 +3,6 @@ import style from "./Switcher.module.scss"
 
 const Switcher: FC = () => {
   const [lightTheme, setLightTheme] = useState(false)
-  const themeText = lightTheme ? "Light" : "Dark"
 
   useEffect(() => {
     document.body.setAttribute("data-theme", lightTheme ? "light" : "dark")

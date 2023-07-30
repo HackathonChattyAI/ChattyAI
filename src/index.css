@@ -44,7 +44,7 @@
   src: local("Fira Sans"),
       url("./assets/fonts/AnyConv.com__FiraSans-Regular.woff2") format('woff2'),
       url("./assets//fonts//AnyConv.com__FiraSans-Regular.woff") format('woff'),
-      url("./assets//fonts//FiraSans-Regular.ttf") format('truetype');
+      url("./assets//fonts//FiraSans-Regular.ttf") format("truetype");
 }
 
 @font-face {

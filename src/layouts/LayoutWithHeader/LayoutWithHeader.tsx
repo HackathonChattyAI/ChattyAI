@@ -1,5 +1,6 @@
-import React, { FC, ReactNode } from "react"
+import React, { FC, ReactNode, useState, useCallback } from "react"
 import style from "./layoutWithHeader.module.scss"
+import Modal from "../../components/Modal/Modal"
 
 export enum backGroundStyle {
   auth = "auth",
@@ -14,6 +15,15 @@ type Props = {
 
 const LayoutWithHeader: FC<Props> = props => {
   const { children, avatar, bg_img } = props
+  const [modal, setModal] = useState(false)
+
+  const handleClose = useCallback(() => {
+    setModal(false)
+  }, [setModal])
+
+  const handleClick = () => {
+    setModal(true)
+  }
 
   let backGround_img
   switch (bg_img) {
@@ -32,8 +42,9 @@ const LayoutWithHeader: FC<Props> = props => {
     <main className={backGround_img}>
       <header className={style.header}>
         <div className={style.logo}></div>
-        {avatar === true ? <button className={style.button} /> : <></>}
+        {avatar === true ? <button onClick={handleClick} className={style.button} /> : <></>}
       </header>
+      <Modal visible={modal} outSideClickEnable handleClose={handleClose} />
       {children}
     </main>
   )
