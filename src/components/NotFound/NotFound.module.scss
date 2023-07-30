@@ -5,10 +5,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: var(--white);
+  font-family: Fira Sans;
 }
 
 .title {
-  color: #FFF;
   font-size: 300px;
   font-weight: 900;
   letter-spacing: 24px;
@@ -21,11 +22,10 @@
 }
 
 .text_content {
-  color: #FFF;
   font-size: 48px;
   font-weight: 500;
   letter-spacing: 0.48px;
-  padding-bottom: 3rem;
+  padding-bottom: 80px;
 
   @media screen and (max-width: 1000px) {
     font-size: 20px;
